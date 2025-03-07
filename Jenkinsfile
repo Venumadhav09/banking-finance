@@ -3,11 +3,11 @@ pipeline{
     stages{
         stage('checkout the code from github'){
             steps{
-                 git url: 'https://github.com/akshu20791/Banking-java-project/'
+                 git url: 'https://github.com/Venumadhav09/banking-finance.git'
                  echo 'github url checkout'
             }
         }
-        stage('codecompile with akshat'){
+        stage('codecompile with venu'){
             steps{
                 echo 'starting compiling'
                 sh 'mvn compile'
@@ -18,12 +18,12 @@ pipeline{
                 sh 'mvn test'
             }
         }
-        stage('qa with akshat'){
+        stage('qa with venu'){
             steps{
                 sh 'mvn checkstyle:checkstyle'
             }
         }
-        stage('package with akshat'){
+        stage('package with venu'){
             steps{
                 sh 'mvn package'
             }
