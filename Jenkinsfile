@@ -35,7 +35,7 @@ pipeline{
          }
         stage('port expose'){
             steps{
-                sh 'docker run -dt -p 2109:2109 --name c00 myimg'
+                sh 'docker run -dt -p 2109:2109 --name venu myimg'
             }
         }   
     }
