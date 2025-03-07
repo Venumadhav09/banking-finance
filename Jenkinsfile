@@ -13,7 +13,7 @@ pipeline{
                 sh 'mvn compile'
             }
         }
-        stage('codetesting with akshat'){
+        stage('codetesting with venu'){
             steps{
                 sh 'mvn test'
             }
@@ -35,7 +35,7 @@ pipeline{
          }
         stage('port expose'){
             steps{
-                sh 'docker run -dt -p 8108:8108 --name c000 myimg'
+                sh 'docker run -dt -p 2109:2109 --name c00 myimg'
             }
         }   
     }
